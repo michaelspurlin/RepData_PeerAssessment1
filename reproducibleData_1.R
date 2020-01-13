@@ -56,4 +56,12 @@ summary(df2)
 time_series <- ggplot(df1, aes(x=interval, y=steps)) +
         geom_line(color = "blue") + 
         xlab("Interval")
+#display the timeseries visualization
 time_series
+
+# remove the NAs
+df_no_NA <- df %>%
+        select(everything()) %>%  # replace to your needs
+        summarise_all(list(sum(is.na(.))))
+head(df_no_NA)
+

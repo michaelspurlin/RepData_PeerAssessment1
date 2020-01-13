@@ -1,0 +1,40 @@
+---
+title: "Activity with Code"
+output: html_document
+---
+knitr```{r setup, include=FALSE}
+::opts_chunk$set(echo = TRUE)
+```
+
+## Activity Project
+
+This poroject looks at 30 days of resuls from an activity tracker
+
+## Setting Up the Project
+
+Installing the necessary packages
+```{r, message = FALSE} 
+library(ggplot2) #for visualizations                      
+library(readr) #for read_csv so dates are formatted properly
+library(dplyr)
+```
+
+Set the working directory
+Bring the data to dataframe called df.
+```{r, message = FALSE}
+setwd("~/R/RepData_PeerAssessment1/data")
+df <- read_csv("activity.csv")
+```
+
+
+
+```{r, echo=TRUE}
+head(df)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
